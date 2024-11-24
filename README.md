@@ -4,3 +4,4 @@
 3. Macros - Declarative Custom Macros
 4. Decompress zip files
 5. Compress files into zip
+6. Concurrency tasks
