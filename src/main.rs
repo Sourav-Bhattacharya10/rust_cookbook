@@ -30,19 +30,19 @@ fn main() {
     // // let temp_list = vec![1, 2, 3];
     // println!("{:?}", temp_list);
 
-    // 3.1 Decompress Zip Files
-    let file_path = "/home/souravbhattacharya/Documents/Visual_Studio_Code/Rust_Projects/rust_cookbook/samples.tar.xz";
-    match decompress_tar_xz(file_path) {
-        Ok(_) => println!("Extracted {file_path} successfully"),
-        Err(err) => eprintln!("Error occurred while extracting {file_path} : {err}"),
-    };
-
-    // 3.2 Compress Files
+    // 3.1 Compress Files
     let gz_file_name = "ferris.tar.gz";
     let file_path = "./Ferris.png";
     match compress_into_tar_gz(file_path, gz_file_name) {
         Ok(_) => println!("Compressed {gz_file_name} successfully"),
         Err(err) => eprintln!("Error occurred while compressing {gz_file_name} : {err}"),
+    };
+
+    // 3.2 Decompress Zip Files
+    let file_path = "/home/souravbhattacharya/Documents/Visual_Studio_Code/Rust_Projects/rust_cookbook/ferris.tar.gz";
+    match decompress_tar_xz(file_path) {
+        Ok(_) => println!("Extracted {file_path} successfully"),
+        Err(err) => eprintln!("Error occurred while extracting {file_path} : {err}"),
     };
 }
 
